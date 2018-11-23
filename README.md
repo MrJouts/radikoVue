@@ -1,4 +1,4 @@
-# amb
+# radiko
 
 ## Project setup
 ```
