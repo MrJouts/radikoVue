@@ -7,11 +7,11 @@
         </router-link>
       </h1>
 
-      <datos-huerta></datos-huerta>
+      <DatosHuerta />
 
       <ul class="menu">
         <li class="nav-item">
-          <router-link to="/productos" class="nav-link">
+          <router-link to="/products" class="nav-link">
             <i class="icon icon-fruit"></i>
             <span>Mis productos</span>
           </router-link>
@@ -59,12 +59,13 @@
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue'
 
+  import DatosHuerta from './components/DatosHuerta.vue'
   export default {
     name: 'app',
+
     components: {
-      HelloWorld
+      DatosHuerta
     }
   }
 </script>

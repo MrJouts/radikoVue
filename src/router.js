@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import ProductsPage from './views/Products.vue'
 //import ProductsPage from './components/ProductsPage.vue';
 //import LoginPage from './components/LoginPage.vue';
 
@@ -18,6 +19,11 @@ const router = new Router({
       name: 'home',
       component: Home
     },
+    {
+      path: '/products',
+      name: 'products',
+      component: ProductsPage
+    }
     // {
       // path: '/login',
       // name: 'login',

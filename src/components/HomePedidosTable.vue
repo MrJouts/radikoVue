@@ -38,7 +38,7 @@
 		},
 
 		mounted() {
-			fetch('http://localhost/dv/pe/radiko/api/pedidos.php?id=1')
+			fetch('http://localhost/proyectos/radikoVue/api/pedidos.php?id=1')
 			.then(respuesta => respuesta.json())
 			.then(data => {
 				this.pedidos = data;
