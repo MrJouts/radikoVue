@@ -1,4 +1,4 @@
-<template>
+v<template>
 	<div class="user">
 		<div class="user-photo">
 			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHdGlkKbVAKyIZ4nqEDssi0DZLKLCVi1m4KD92sPs8lC95-OUYBg" alt="Huerta" />
@@ -21,7 +21,7 @@
 		},
 
 		mounted() {
-			fetch('http://localhost/proyectos/radikoVue/api/huerta.php?id=1')
+			fetch('http://localhost/projects/radikoVue/api/huerta.php?id=1')
 			.then(respuesta => respuesta.json())
 			.then(data => {
 				this.huerta = data;

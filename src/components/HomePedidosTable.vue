@@ -14,7 +14,7 @@
 			<PedidosTableRow 
 			v-for="pedido in pedidos"
 			:pedido="pedido"
-			:key="pedido.id_pedido"
+
 			/>
 		</tbody>
 	</table>
@@ -31,18 +31,14 @@
 			PedidosTableRow
 		},
 
-		data() {
-			return {
-				pedidos: []
+		computed: {
+			pedidos() {
+				return this.$store.state.pedidos;
 			}
 		},
 
 		mounted() {
-			fetch('http://localhost/proyectos/radikoVue/api/pedidos.php?id=1')
-			.then(respuesta => respuesta.json())
-			.then(data => {
-				this.pedidos = data;
-			});
+			this.$store.dispatch('loadPedidos');
 		}
 	}
 

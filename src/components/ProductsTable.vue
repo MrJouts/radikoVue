@@ -14,13 +14,13 @@
 			<ProductsTableRow 
 			v-for="(producto, index) in productos"
 			:producto="producto"
-			:key="producto.id_producto"
 			/>
 		</tbody>			
 	</table>
 </template>
 
 <script>
+
 	import ProductsTableRow from './ProductsTableRow.vue'
 
 	export default {
@@ -30,17 +30,15 @@
 			ProductsTableRow
 		},
 
-		data() {
-			return {
-				productos: []
+		computed: {
+			productos() {
+				return this.$store.state.productos;
 			}
 		},
+
 		mounted() {
-			fetch('http://localhost/proyectos/radikoVue/api/productos.php')
-			.then(response => response.json())
-			.then(data => {
-				this.productos = data;
-			})
+			this.$store.dispatch('loadProducts')
 		}
 	}
+	
 </script>
