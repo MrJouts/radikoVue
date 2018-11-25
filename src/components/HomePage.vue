@@ -42,13 +42,13 @@
 	import PedidosTable from './HomePedidosTable.vue';
 
 	export default {
-  name: 'home',
+		name: 'home',
 
-  components: {
-  	InfoTop,
-  	UltimosMensajesTable,
-  	PedidosTable
-  }
-}
+		components: {
+			InfoTop,
+			UltimosMensajesTable,
+			PedidosTable
+		}
+	}
 
 </script>

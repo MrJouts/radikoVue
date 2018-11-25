@@ -3,7 +3,7 @@
 		<h2>Listado de productos de tu huerta</h2>
 		<p>Acá podés visualizar todos tus productos, editarlos o eliminarlos</p>
 
-		<router-link to="/productos/create" class="btn btn-primary btn-lg cta-abs">
+		<router-link to="/products/create" class="btn btn-primary btn-lg cta-abs">
 			<i class="bold">+</i>
 			<span>Agregar producto</span>
 		</router-link>

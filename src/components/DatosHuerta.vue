@@ -13,19 +13,15 @@ v<template>
 <script>
 	
 	export default {
-
-		data() {
-			return {
-				huerta: []
+		computed: {
+			huerta() {
+				return this.$store.state.huerta
 			}
 		},
 
 		mounted() {
-			fetch('http://localhost/projects/radikoVue/api/huerta.php?id=1')
-			.then(respuesta => respuesta.json())
-			.then(data => {
-				this.huerta = data;
-			});
+
+			this.$store.dispatch('loadDatosHuerta')
 		}
 	}
 

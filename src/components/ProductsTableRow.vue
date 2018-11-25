@@ -7,10 +7,15 @@
 		<td>{{ producto.stock }} {{ producto.unidad_de_medida }}</td>
 		<td>{{ estado }}</td>
 		<td>
-			<router-link :to="'/productos/' + producto.id_producto" class="btn btn-primary">Ver</router-link>
-			<router-link :to="'/productos/edit/' + producto.id_producto" class="btn btn-terciary">Editar</router-link>
-
-			<a class="btn btn-secondary btn-sm" v-confirm="{ok: dialog => eliminar(producto), message: '¿Seguro que querés eliminar este producto?'}">Eliminar</a>
+			<router-link 
+				:to="'/product/' + producto.id_producto" 
+				class="btn btn-primary">Ver</router-link>
+			<router-link 
+				:to="'/products/edit/' + producto.id_producto" 
+				class="btn btn-terciary">Editar</router-link>
+			<a 
+				class="btn btn-secondary btn-sm" 
+				v-confirm="{ok: dialog => eliminar(producto), message: '¿Seguro que querés eliminar este producto?'}">Eliminar</a>
 		</td>
 	</tr>
 
@@ -23,7 +28,7 @@
 
 		computed: {
 
-			estado: function() {
+			estado() {
 				if (this.producto.activo == "1") {
 					return 'Publicado';
 				} else {
@@ -31,11 +36,10 @@
 				}
 			},
 
-			marca: function() {
+			marca() {
 				if(this.producto.marca == null) {
 					return '-';
 				}
-
 				return this.producto.marca;
 			}
 		},

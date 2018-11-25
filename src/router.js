@@ -2,6 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import ProductsPage from './views/Products.vue'
+import ProductDetailPage from './views/ProductDetail.vue'
+import ProductsCreatePage from './views/ProductsCreate.vue'
+import ProductsEditPage from './views/ProductsEdit.vue'
+
 //import ProductsPage from './components/ProductsPage.vue';
 //import LoginPage from './components/LoginPage.vue';
 
@@ -23,32 +27,22 @@ const router = new Router({
       path: '/products',
       name: 'products',
       component: ProductsPage
+    },
+    {
+      path: '/products/create',
+      name: 'productsCreate',
+      component: ProductsCreatePage
+    },
+    {
+      path: '/products/edit/:id',
+      name: 'productsEdit',
+      component: ProductsEditPage
+    },
+    {
+      path: '/product/:id',
+      name: 'single-product',
+      component: ProductDetailPage
     }
-    // {
-      // path: '/login',
-      // name: 'login',
-      // component: LoginPage
-    // },
-    // {
-      // path: '/products',
-      // name: 'products',
-      // component: ProductsPage,
-      // "meta" es la propiedad que Vue Router utiliza para que podamos
-      // agregarle datos arbitrarios a una ruta.
-      //meta: {
-        // Las rutas que requieran autenticación, las vamos a indicar
-        // con esta propiedad.
-       // requiresAuth: true
-      //}
-    //},
-    // {
-      //path: '/about',
-      //name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      //component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    // }
   ]
 });
 
